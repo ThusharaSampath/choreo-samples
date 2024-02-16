@@ -53,13 +53,11 @@
           <artifactId>maven-jar-plugin</artifactId>
           <version>3.0.2</version>
           <configuration>
-            <!-- <archive>
+            <archive>
               <manifest>
                 <mainClass>com.sample.app.App</mainClass>
               </manifest>
-            </archive> -->
-            <mainClass>com.sample.app.App</mainClass>
-            <layout>JAR</layout>
+            </archive>
           </configuration>
         </plugin>
         <plugin>
