@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net;
+using System.Threading;
 
 namespace HelloWorldApp
 {
@@ -13,6 +14,9 @@ namespace HelloWorldApp
             {
                 Console.WriteLine("Command-line argument: " + arg);
             }
+            Console.WriteLine("Sleeping for 1 minute...");
+            Thread.Sleep(TimeSpan.FromMinutes(1));
+            Console.WriteLine("Resuming execution...");
         }
     }
 }
