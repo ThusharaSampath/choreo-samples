@@ -15,7 +15,7 @@ namespace HelloWorldApp
                 Console.WriteLine("Command-line argument: " + arg);
             }
             Console.WriteLine("Sleeping for 1 minute...");
-            Thread.Sleep(TimeSpan.FromMinutes(3));
+            Thread.Sleep(TimeSpan.FromMinutes(6));
             Console.WriteLine("Resuming execution...");
         }
     }
