@@ -46,3 +46,6 @@ dist
 
 # maven
 target/
+
+bin/
+obj/
