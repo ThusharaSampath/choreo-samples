@@ -24,7 +24,7 @@ If you'd like to add a new sample to this repository, please follow the below st
     - A brief description of the sample.
     - Instructions on how to deploy the sample in Choreo.
     - Instructions on how to test the sample.
-3. Add a metadatata file for the sample in the `.samples` directory. The metadata file should be named as `<sample-name>.yaml`. The metadata file should contain the following information:
+3. Add a metadata file for the sample in the `.samples` directory. The metadata file should be named as `<sample-name>.yaml`. The metadata file should contain the following information:
     - `name`: Name of the sample.
     - `description`: A brief description of the sample.
     - `componentType`: Component type of the sample. Examples:
