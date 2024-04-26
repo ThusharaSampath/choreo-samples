@@ -2,8 +2,8 @@
    <config enableOData="false" id="Datasource">
       <property name="driverClassName">$SYSTEM:DB_DRIVER_CLASS</property>
       <property name="url">$SYSTEM:DB_CONNECTION_URL</property>
-      <property name="username">wso2:vault-lookup('DB_USER')</property>
-      <property name="password">wso2:vault-lookup('DB_PASS')</property>
+      <property name="username" expression="wso2:vault-lookup('DB_USER')"/>
+      <property name="password" expression="wso2:vault-lookup('DB_PASS')"/>
    </config>
    <query id="GetEmployeeDetails" useConfig="Datasource">
       <sql>select EmployeeNumber, FirstName, LastName, Email, Salary from Employees where EmployeeNumber=:EmployeeNumber</sql>
