@@ -1,6 +1,6 @@
 # Hello World MI
 
-Sample for Hello World service. This API responds with a "Hello: World" message when called, making it an excellent starting point for beginners and a handy tool for testing API integrations.
+Sample for Hello World service. When called, this API responds with a "Hello: World" message, making it an excellent starting point for beginners and a handy tool for testing API integrations.
 
 ## Getting started
 
