@@ -21,7 +21,7 @@ Please refer to the Choreo documentation under the [Develop a REST API](https://
 
 You can select either Docker or Go as buildpacks. Fill as follows according to the selected Buildpack.
 
-1. Select `Service` Card from the Component Creation Wizard
+1. Select the `Service` Card from the Component Creation Wizard
 2. Select `Go` as the buildpack. Fill as follows according to the selected Buildpack.
 
     | **Field**             | **Description**                               |
