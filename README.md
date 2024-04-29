@@ -46,7 +46,7 @@ If you'd like to add a new sample to this repository, please follow the below st
         - `wso2-mi`
     - `repositoryUrl`: The GitHub repository URL of the sample. https://github.com/wso2/choreo-samples/
     - `componentPath` : The path to the component in the repository. This should be the path to the directory that contains the sample.
-    - `thumbnailPath`: The path to the thumbnail image of the sample. This should be the path to the thumbnail image relative to the `repositoryUrl` directory. It is recommended to add the thumbnail to the `.samples/icons` directory and refer it here.
+    - `thumbnailPath`: The path to the thumbnail image of the sample. This should be the path to the thumbnail image relative to the `repositoryUrl` directory. It is recommended to add the thumbnail to the `.samples/icons` directory and refer to it here.
     - `documentationPath`: The path to the documentation/README.md of the sample. This should be the path to the documentation relative to the `repositoryUrl` directory.
     - `tags`: Tags for the sample. This should be a list of strings.
 4. Submit a pull request to this repository.
