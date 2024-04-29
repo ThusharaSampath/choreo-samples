@@ -1,4 +1,4 @@
-# Data service integration
+# MI Data Service Integration
 
 The "Data Service Integration" sample demonstrates how to create an integration that integrates with a relational database management system (RDBMS) and exposes employee information stored in the database as a REST API. To use this sample with Choreo, follow these steps:
 
