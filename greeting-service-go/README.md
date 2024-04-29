@@ -26,8 +26,8 @@ You can select either Docker or Go as buildpacks. Fill as follows according to t
 
     | **Field**             | **Description**                               |
     |-----------------------|-----------------------------------------------|
-    |Name           | Greeting Service              |
-    |Description    | greeting service        |
+    | Name           | Greeting Service              |
+    | Description    | greeting service        |
     | **GitHub Account**    | Your account                                  |
     | **GitHub Repository** | choreo-samples |
     | **Branch**            | **`main`**                               |
