@@ -21,7 +21,7 @@ schemaVersion: 1.0
 endpoints:
   # +required Unique name for the endpoint.
   # This name will be used when generating the managed API
-  - name: go_greeter
+  - name: go_greeter_new
     # +optional Display name for the endpoint.
     displayName: Go Greeter
     # +required Service section has the user service endpoint details
@@ -42,4 +42,4 @@ endpoints:
     # Defaults to wildcard route if not specified.
     # This is only applicable to REST endpoint types.
     # The path should be relative to the docker context.
-    schemaFilePath: openapiX.yaml
+    schemaFilePath: openapi.yaml
