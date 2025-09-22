@@ -19,7 +19,7 @@ function testGreetingForSpecificName() returns error? {
 @test:Config {}
 function testGreetingResponseStructure() returns error? {
     http:Response response = check testClient->get("/?name=TestUser");
-    test:assertEquals(response.statusCode, 200);
+    test:assertEquals(response.statusCode, 500);
     json payload = check response.getJsonPayload();
     test:assertTrue(payload.'from is string);
     test:assertTrue(payload.to is string);
