@@ -38,6 +38,7 @@ endpoints:
     # Accepted values: Project|Organization|Public(Default).
     networkVisibilities:
       - Public
+      - Project
   - name: jolokia-agent
     # +optional Display name for the endpoint.
     displayName: Jolokia Agent
@@ -55,3 +56,4 @@ endpoints:
     # Accepted values: Project|Organization|Public(Default).
     networkVisibilities:
       - Public
+      - Project
