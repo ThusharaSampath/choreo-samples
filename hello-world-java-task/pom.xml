@@ -78,5 +78,53 @@
         </plugin>
       </plugins>
     </pluginManagement>
+    <plugins>
+      <!-- Plugin to generate lots of log output during build -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <version>3.1.0</version>
+        <executions>
+          <execution>
+            <id>generate-build-logs</id>
+            <phase>compile</phase>
+            <goals>
+              <goal>run</goal>
+            </goals>
+            <configuration>
+              <target>
+                <echo message="=== Starting Build Log Generation for Pipeline Load Testing ===" />
+                <echo message="This build will generate 3000+ log lines to test pipeline log handling" />
+                <echo message="" />
+                
+                <!-- Generate 3500 log lines -->
+                <script language="javascript"><![CDATA[
+                  for (var i = 1; i <= 3500; i++) {
+                    var timestamp = new Date().toISOString();
+                    var message = "[BUILD-LOG-" + i + "] " + timestamp + " - Processing build step " + i + " of 3500 | Component: maven-compiler | Status: OK | Memory: " + (Math.floor(Math.random() * 1000) + 500) + "MB";
+                    project.log(message);
+                  }
+                ]]></script>
+                
+                <echo message="" />
+                <echo message="=== Build Log Generation Complete - 3500 lines generated ===" />
+              </target>
+            </configuration>
+          </execution>
+        </executions>
+        <dependencies>
+          <dependency>
+            <groupId>org.apache.ant</groupId>
+            <artifactId>ant</artifactId>
+            <version>1.10.14</version>
+          </dependency>
+          <dependency>
+            <groupId>org.apache.ant</groupId>
+            <artifactId>ant-launcher</artifactId>
+            <version>1.10.14</version>
+          </dependency>
+        </dependencies>
+      </plugin>
+    </plugins>
   </build>
 </project>
