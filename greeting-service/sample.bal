@@ -11,6 +11,8 @@ configurable string requiredConfig = ?;
 configurable string OptionalConfig = "Welcome to Choreo!";
 configurable string requiredSecret = ?;
 configurable string OptionalSecret = "This is a default secret message.";
+configurable int globalRequiredConfig = ?;
+configurable int globalOptionalConfig = 8080;
 
 service / on new http:Listener(8090) {
     
@@ -20,6 +22,8 @@ service / on new http:Listener(8090) {
         log:printInfo("Optional Config: " + OptionalConfig);
         log:printInfo("Optional Secret: " + OptionalSecret);
         log:printInfo("Required Secret: " + requiredSecret);
+        log:printInfo("Global Required Config: " + globalRequiredConfig.toString());
+        log:printInfo("Global Optional Config: " + globalOptionalConfig.toString());
         log:printInfo("Service listening on port 8090");
     }
     
