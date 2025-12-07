@@ -7,15 +7,29 @@ type Greeting record {
     string message;
 };
 
-// required configuration for Choreo
-configurable string choreo_token = ?;
-// optional configuration for custom greeting message
-configurable string custom_message = "Welcome to Choreo!";
+configurable string requiredConfig = ?;
+configurable string OptionalConfig = "Welcome to Choreo!";
+configurable string requiredSecret = ?;
+configurable string OptionalSecret = "This is a default secret message.";
 
 service / on new http:Listener(8090) {
+    
+    function init() {
+        log:printInfo("Server starting with configurations:");
+        log:printInfo("Required Config: " + requiredConfig);
+        log:printInfo("Optional Config: " + OptionalConfig);
+        log:printInfo("Optional Secret: " + OptionalSecret);
+        log:printInfo("Required Secret: " + requiredSecret);
+        log:printInfo("Service listening on port 8090");
+    }
+    
     resource function get .(string name) returns Greeting {
-        Greeting greetingMessage = {"from" : "Choreo", "to" : name, "message" : custom_message};
-        log:printInfo("Choreo Token: " + choreo_token);
+        Greeting greetingMessage = {
+            "from": "Choreo", 
+            "to": name, 
+            "message": string `${OptionalConfig} | Required Config: ${requiredConfig} | Optional Secret: ${OptionalSecret} | Required Secret: ${requiredSecret}`
+        };
+        log:printInfo("Choreo Token: " + requiredConfig);
         return greetingMessage;
     }
 }
