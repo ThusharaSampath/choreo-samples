@@ -1,7 +1,5 @@
 import ballerina/http;
-
-// Define configurable variables, including the HR endpoint
-configurable string hrEndpoint = ?;
+import employee_details_service.hr;
 
 type Request record {|
     int[] employeeIds;
@@ -14,7 +12,7 @@ type Employees record {|
 service / on new http:Listener(9090) {
     // Define your resource functions here
     resource function post employees(@http:Payload Request payload) returns Employees|error? {
-        http:Client locationEP = check new (hrEndpoint);
+        http:Client locationEP = check new (hr:hrEndpoint);
         int[] idList = payload.employeeIds;
         json[] employeInfoList = [];
         foreach int id in idList {
