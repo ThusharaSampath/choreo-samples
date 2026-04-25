@@ -11,12 +11,12 @@ func main() {
 	// Seed the random number generator
 	rand.Seed(time.Now().UnixNano())
 
-	// Maximum lifetime is 10 minutes (600 seconds)
-	maxDuration := 600
+	// Maximum lifetime is 2 minutes (120 seconds)
+	maxDuration := 120
 	duration := rand.Intn(maxDuration) + 1 // at least 1 second
 
-	// Randomly decide if it will fail (50% chance)
-	shouldFail := rand.Intn(2) == 0
+	// Randomly decide if it will fail (80% chance)
+	shouldFail := rand.Float64() < 0.8
 
 	fmt.Printf("Task started. Duration: %d seconds. Will fail: %v\n", duration, shouldFail)
 
