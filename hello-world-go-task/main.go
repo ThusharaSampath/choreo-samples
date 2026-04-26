@@ -12,7 +12,7 @@ func main() {
 	rand.Seed(time.Now().UnixNano())
 
 	// Maximum lifetime is 2 minutes (120 seconds)
-	maxDuration := 120
+	maxDuration := 10
 	duration := rand.Intn(maxDuration) + 1 // at least 1 second
 
 	// Randomly decide if it will fail (80% chance)
