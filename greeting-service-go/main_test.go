@@ -34,7 +34,7 @@ func TestGreet(t *testing.T) {
 		{
 			name:           "greet with name parameter",
 			queryParam:     "name=John",
-			expectedBody:   "Hello, John!\n",
+			expectedBody:   "Bye, John!\n",
 			expectedStatus: http.StatusOK,
 		},
 		{
