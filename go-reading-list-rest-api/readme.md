@@ -36,7 +36,7 @@ For more information on how to configure a service in Choreo, refer [Manage Conf
 
 #### Load initial data ( optional )
 
-1. Set environment variable by navigating to Choreo Deploy page `INIT_DATA_PATH=configs/initial_data.json`
+1. Set environment variable by navigating to the Choreo Deploy page `INIT_DATA_PATH=configs/initial_data.json`
 2. Mount the file contents of `configs/initial_data.json` in the path specified in step 1.
 
 See [initial_data.json](configs/initial_data.json) for a sample file.
