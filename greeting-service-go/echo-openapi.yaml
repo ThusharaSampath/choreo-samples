@@ -1,0 +1,26 @@
+openapi: "3.0.0"
+info:
+  title: Echo Service
+  version: 1.0.0
+paths:
+  /echo:
+    get:
+      summary: Echo a message
+      description: Returns the given message as-is
+      tags:
+        - echo
+      parameters:
+        - name: message
+          in: query
+          description: Message to echo
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            text/plain:
+              schema:
+                type: string
+      deprecated: false

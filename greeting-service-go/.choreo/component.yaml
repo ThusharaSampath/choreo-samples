@@ -19,6 +19,16 @@ schemaVersion: 1.0
 
 # +optional Incoming connection details for the component
 endpoints:
+  # Second endpoint on the same port/type/basePath as go_greeter
+  - name: go_echo
+    displayName: Go Echo
+    service:
+      basePath: /
+      port: 9090
+    type: REST
+    networkVisibilities:
+      - Public
+    schemaFilePath: echo-openapi.yaml
   # +required Unique name for the endpoint.
   # This name will be used when generating the managed API
   - name: go_greeter
